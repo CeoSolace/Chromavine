@@ -1,10 +1,9 @@
 import os
 import json
 import tempfile
-from unittest.mock import patch
 from core.updater import UpdateManager
 
-def test_update_config_saves_verified_date():
+def test_update_saves_verified_date():
     with tempfile.TemporaryDirectory() as tmpdir:
         os.chdir(tmpdir)
         config = {
